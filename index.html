@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Control LED</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:1000');
+        
+        function turnOn() {
+            console.log('Turning LED on...');
+            socket.emit('message', 'turn-on');
+        }
+        
+        function turnOff() {
+            console.log('Turning LED off...');
+            socket.emit('message', 'turn-off');
+        }
+    </script>
+</head>
+<body>
+    <h1>Control LED</h1>
+    <button onclick="turnOn()">Turn On</button>
+    <button onclick="turnOff()">
