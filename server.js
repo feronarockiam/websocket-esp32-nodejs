@@ -4,7 +4,7 @@ const WebSocket = require('ws');
 const server = http.createServer();
 const wss = new WebSocket.Server({ server });
 
-// Arduino WebSocket client
+// Arduino WebSocket clientt
 const WebSocketClient = require('websocket').client;
 const webSocketClient = new WebSocketClient();
 
