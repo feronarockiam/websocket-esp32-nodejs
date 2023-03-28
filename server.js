@@ -4,7 +4,7 @@ const WebSocket = require('ws');
 const server = http.createServer();
 const wss = new WebSocket.Server({ server });
 
-// Arduino WebSocket clientt
+// Arduino WebSocket client
 const WebSocketClient = require('websocket').client;
 const webSocketClient = new WebSocketClient();
 
@@ -32,7 +32,7 @@ webSocketClient.on('connect', function (connection) {
     });
 });
 
-webSocketClient.connect('ws://127.0.0.1:1000/', '');
+webSocketClient.connect('ws://127.0.0.1:1000/', '')
 
 
 
